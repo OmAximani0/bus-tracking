@@ -37,7 +37,6 @@ class ViewBuses(APIView):
         bus_route_serializer = serializers.BusRouteTimeSerializer(route_instance, many=True)
         temp_dict = {}
         for data in bus_route_serializer.data:
-            print(data)
             Bus_id = data.get('Bus_id')['Bus_id']
             temp_dict['Bus_id'] = Bus_id
             temp_dict['Bus_name'] = data.get('Bus_id')['Bus_name']

@@ -1,20 +1,15 @@
-from django.shortcuts import render
 from rest_framework.response import Response
-from django.http import HttpResponseBadRequest
 from .serializers import UserSerializer
-from django.contrib.auth.models import User, update_last_login
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .serializers import MyTokenObtainPairSerializer
 from rest_framework.views import APIView
 from rest_framework import status
-from users import serializers
 from .models import Users
 from rest_framework.permissions import IsAuthenticated
 
 class AddUser(APIView):
     def post(self,request):
         response = {}
-        print(request.data)
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()

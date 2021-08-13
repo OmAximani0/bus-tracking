@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     
-    # 'users.apps.UsersConfig',
+    'users.apps.UsersConfig',
     'api.apps.ApiConfig',
 ]
 
@@ -148,8 +148,7 @@ SIMPLE_JWT = {
     'USER_ID_FIELD': 'fullname'  
 }
 
+AUTH_USER_MODEL = "users.Users"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ALLOWED_HOSTS=['*']
-CORS_ORIGIN_ALLOW_ALL = True 
-
-#AUTH_USER_MODEL = "users.Users"
+CORS_ORIGIN_ALLOW_ALL = True
