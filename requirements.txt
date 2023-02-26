@@ -6,7 +6,6 @@ django-jet==1.0.8
 django-model-utils==4.1.1
 djangorestframework==3.12.4
 djangorestframework-simplejwt==4.7.2
-mysqlclient==2.0.3
 PyJWT==2.1.0
 pytz==2021.1
 six==1.16.0
