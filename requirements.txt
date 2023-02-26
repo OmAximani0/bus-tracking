@@ -1,5 +1,6 @@
 asgiref==3.4.1
 Django==3.2.6
+django-3-jet==1.0.8
 django-cors-headers==3.7.0
 django-jet==1.0.8
 django-model-utils==4.1.1
