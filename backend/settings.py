@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!y3^7_4*x729hu2@sg6e&jnd9#2acdehv(+hkuvaw^($nhi@1@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '.thinkbackend.app']
 
 
 # Application definition
@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '4af8e4a3-3d28-4f97-a398-7e314e8e3d41',
+        'USER': 'uOOQtpVDFCNAUCmzScdXnDmfnTpgGKKN',
+        'PASSWORD': 'YGlcJDSnrqXLnxHZhXibTPzLvUPmkBPI',
+        'HOST': 'db.thin.dev',
+        'PORT': ''
     }
 }
 
@@ -125,6 +129,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR/'static',]
+STATIC_ROOT = BASE_DIR/'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
