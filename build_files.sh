@@ -1,3 +1,3 @@
 pip install -r requirements.txt
-python3 --version
+apt-get install python3.7
 python3.7 manage.py collectstatic --noinput
